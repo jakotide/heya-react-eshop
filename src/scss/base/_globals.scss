@@ -1,6 +1,11 @@
-$primary: #9BD19D;
-$secondary: #DBDBDB;
-$body: #EEEEEE;
-$white: #FFF;
+$primary: #9bd19d;
+$secondary: #dbdbdb;
+$body: #eeeeee;
+$white: #fff;
 $black: #000;
 
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

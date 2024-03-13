@@ -1,0 +1,23 @@
+@use "../../scss/base/globals" as globals;
+
+nav {
+  background-color: globals.$primary;
+  height: 4.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+
+  menu {
+    display: flex;
+    gap: 2rem;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

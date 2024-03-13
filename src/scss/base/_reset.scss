@@ -1,3 +1,5 @@
+@use "../base/globals" as globals;
+
 *,
 *::before,
 *::after {
@@ -17,14 +19,13 @@ html:focus-within {
 html,
 body {
   height: 100%;
- 
 }
 
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: red;
-  color: red;
+  background-color: globals.$body;
+  font-family: 'Monopop Regular';
 }
 
 * {
@@ -46,7 +47,6 @@ button,
 input,
 label {
   line-height: 1.1;
-  color: red;
 }
 
 a:not([class]) {
