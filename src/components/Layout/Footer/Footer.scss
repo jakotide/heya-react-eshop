@@ -1,6 +1,68 @@
+@use "../../../scss/base/globals" as globals;
+@use "../../../scss/base/mixins" as mixins;
+
 footer {
-  height: 400px;
+  height: 300px;
   width: 100%;
-  background-color: black;
+  background-color: globals.$black;
+  color: globals.$white;
   margin-top: auto;
+  display: flex;
+  justify-content: center;
+
+  .footer__content__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 2rem;
+
+    .footer__top__container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 1px solid white;
+      width: 100%;
+      height: 70%;
+
+      .footer__logo {
+        text-decoration: none;
+        color: globals.$white;
+        font-size: 4rem;
+
+        @include mixins.mobile {
+          font-size: 2rem;
+        }
+      }
+
+      .socials {
+        display: flex;
+        gap: 3rem;
+        font-size: 1.3rem;
+        color: globals.$black;
+
+        @include mixins.mobile {
+          gap: 1rem;
+          font-size: 1rem;
+        }
+
+        div {
+          background-color: globals.$white;
+          border-radius: 50%;
+          aspect-ratio: 1 / 1;
+          height: 32px;
+          display: grid;
+          place-items: center;
+          padding-top: 2px;
+
+          @include mixins.mobile {
+            height: 24px;
+          }
+        }
+      }
+    }
+    .dev {
+      margin: 2rem auto;
+    }
+  }
 }

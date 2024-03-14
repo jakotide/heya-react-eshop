@@ -1,0 +1,25 @@
+@use "../../../scss/base/" as globals;
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: globals.$primary;
+    height: 4.5rem;
+    color: globals.$black;
+    padding: 0 5rem;
+    position: fixed;
+
+    .link {
+        text-decoration: none;
+        
+    }
+
+     .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        color: globals.$black;
+    }
+}

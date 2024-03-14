@@ -1,0 +1,23 @@
+.cart__container {
+    position: relative;
+
+    img {
+        width: 24px;
+        margin-bottom: 7px;
+    }
+
+    div {
+        position: absolute;
+        font-size: 9px;
+        color: #000;
+        background-color: #FFF;
+        height: 16px;
+        width: 16px;
+        padding-top: 3px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        top: -4px;
+        left: 14px;
+    }
+}

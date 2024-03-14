@@ -1,21 +1,24 @@
 import "./Navigation.scss";
+import { Link } from "react-router-dom";
+import { CartIcon } from "../CartIcon";
 
-export const Navigation =() => {
+
+export const Navigation = () => {
   return (
     <>
       <nav>
         <menu>
           <li>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <a href="">Cart</a>
+            <CartIcon />
           </li>
         </menu>
       </nav>
     </>
   );
-}
+};
