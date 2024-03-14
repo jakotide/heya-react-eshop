@@ -1,15 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout";
+import { Home, Contact, Cart } from "./pages";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />}/>
+      </Route>
+    </Routes>
   );
 }
 
