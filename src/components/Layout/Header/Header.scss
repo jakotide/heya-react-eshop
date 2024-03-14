@@ -22,4 +22,10 @@
         cursor: pointer;
         color: globals.$black;
     }
+
+    .nav__container {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
 }
