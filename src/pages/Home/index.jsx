@@ -1,10 +1,10 @@
 import "./Home.scss";
+import { Hero } from "../../components/Hero";
 
 export const Home = () => {
     return (
         <>
-        <h1>HOME</h1>
-        <p>isdfjhlskdjfgosdkghsdoløkjghsodkjgh</p>
+        <Hero />
         </>
     )
 }

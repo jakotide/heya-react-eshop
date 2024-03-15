@@ -1,0 +1,22 @@
+@use "../../../scss/base/globals" as globals;
+
+button {
+    height: 3rem;
+    width: 8rem;
+    border: none;
+    border-radius: 16px;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.green {
+    background-color: globals.$primary;
+    color: globals.$black;
+}
+
+.black {
+    background-color: globals.$black;
+    color: globals.$white; 
+}
