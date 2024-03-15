@@ -5,11 +5,13 @@ nav {
   height: 4.5rem;
   display: flex;
   align-items: center;
+  z-index: 50;
 
   menu {
     display: flex;
     gap: 2rem;
     align-items: center;
+    z-index: 50;
 
     li {
       list-style: none;
