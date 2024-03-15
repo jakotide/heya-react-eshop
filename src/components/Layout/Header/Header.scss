@@ -1,4 +1,5 @@
 @use "../../../scss/base/" as globals;
+@use "../../../scss/base/" as mixins;
 
 .header__container {
     display: flex;
@@ -10,6 +11,14 @@
     color: globals.$black;
     padding: 0 5rem;
     position: fixed;
+
+    @include mixins.tablet {
+        padding: 0 3rem;
+    }
+
+    @include mixins.mobile {
+        padding: 0 1.5rem;
+    }
 
     .link {
         text-decoration: none;
