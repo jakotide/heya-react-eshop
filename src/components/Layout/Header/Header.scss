@@ -9,16 +9,16 @@
     background-color: globals.$primary;
     height: 4.5rem;
     color: globals.$black;
-    padding: 0 5rem;
+    padding: 0 3rem;
     position: fixed;
     z-index: 100;
 
     @include mixins.tablet {
-        padding: 0 3rem;
+        padding: 0 2rem;
     }
 
     @include mixins.mobile {
-        padding: 0 1.5rem;
+        padding: 0rem;
     }
 
     .link {
@@ -36,6 +36,6 @@
     .nav__container {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 0rem;
     }
 }

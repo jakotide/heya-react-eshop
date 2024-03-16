@@ -1,2 +1,50 @@
 @use "../../scss/base/globals" as globals;
 
+.product__card {
+  display: flex;
+  flex-direction: column;
+  background-color: globals.$secondary;
+  border-radius: 20px;
+
+  img {
+    object-fit: cover;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .product__info {
+    padding: 1rem;
+
+    h3 {
+      font-size: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-wrap: balance;
+    }
+  }
+
+  .product__cta {
+    display: flex;
+    margin-top: auto;
+
+    .card__price {
+      background-color: globals.$black;
+      color: globals.$white;
+      display: grid;
+      place-items: center;
+      width: 50%;
+      border-bottom-left-radius: 20px;
+    }
+
+    .card__button {
+      width: 50%;
+      border-radius: 0;
+      border-bottom-right-radius: 20px;
+    }
+  }
+}

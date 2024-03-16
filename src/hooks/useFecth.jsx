@@ -25,3 +25,4 @@ export function useApi(url) {
     }, [url]);
     return { data, isLoading, isError };
 };
+

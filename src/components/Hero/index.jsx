@@ -16,10 +16,10 @@ export const Hero = () => {
           </p>
           <div className="hero__button__container">
             <Button variant="green">
-                <Link>Products</Link>
+                Products
             </Button>
             <Button variant="black">
-                <Link>Contact</Link>
+                Contact
             </Button>
           </div>
         </div>

@@ -3,17 +3,23 @@
 
 .product__section {
     display: flex;
+    flex-direction: column;
     max-width: 80rem;
-    height: 200px;
     width: 100%;
-    background-color: red;
-    margin: 0 4rem;
+    margin: 0 0 4rem;
+  
 
-    @include mixins.tablet {
-        margin: 0 3rem;
+    h2 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
     }
-    
-    @include mixins.mobile {
-        margin: 0 1.5rem;
+
+    .product__container {
+        display: grid;
+        grid-template-columns: 
+        repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        max-width: 80rem;
+        overflow: hidden;
     }
 }

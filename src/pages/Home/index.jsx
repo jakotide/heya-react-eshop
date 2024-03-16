@@ -1,5 +1,5 @@
 import "./Home.scss";
-import { Hero } from "../../components/Hero";
+import { Hero, ProductCard } from "../../components";
 
 export const Home = () => {
   return (
@@ -7,8 +7,13 @@ export const Home = () => {
       <Hero />
       <div className="container-flex">
         <section className="product__section">
-          <div>Discover</div>
-          <div className="product__container"></div>
+          <h2>Discover</h2>
+          <div className="product__container">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </div>
         </section>
       </div>
     </>
