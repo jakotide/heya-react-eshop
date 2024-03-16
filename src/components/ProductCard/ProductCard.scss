@@ -3,18 +3,24 @@
 .product__card {
   display: flex;
   flex-direction: column;
+  
   background-color: globals.$secondary;
   border-radius: 20px;
+  
 
   img {
     object-fit: cover;
-    height: 50%;
+    height: 40%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
 
   .product__info {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
 
     h3 {
       font-size: 2rem;
@@ -23,14 +29,20 @@
 
     p {
       text-overflow: ellipsis;
-      overflow: hidden;
+    //   overflow: hidden;
       text-wrap: balance;
     }
   }
 
+  .stars {
+    margin-top: auto;
+    
+    }
+
   .product__cta {
     display: flex;
     margin-top: auto;
+    height: 10%;
 
     .card__price {
       background-color: globals.$black;
@@ -43,6 +55,7 @@
 
     .card__button {
       width: 50%;
+      height: 100%;
       border-radius: 0;
       border-bottom-right-radius: 20px;
     }
