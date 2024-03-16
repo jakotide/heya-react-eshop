@@ -1,5 +1,19 @@
-// h1 {
-//     margin-top: 100px;
-//     font-size: 10rem;
-//     color: black;
-// }
+@use "../../scss/base/" as globals;
+@use "../../scss/base/" as mixins;
+
+.product__section {
+    display: flex;
+    max-width: 80rem;
+    height: 200px;
+    width: 100%;
+    background-color: red;
+    margin: 0 4rem;
+
+    @include mixins.tablet {
+        margin: 0 3rem;
+    }
+    
+    @include mixins.mobile {
+        margin: 0 1.5rem;
+    }
+}

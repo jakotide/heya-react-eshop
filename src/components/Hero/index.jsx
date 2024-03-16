@@ -10,7 +10,7 @@ export const Hero = () => {
         <div className="hero__text__container">
           <h1>WELCOME</h1>
           <p>
-            Welcome to our store! Start shopping now and explore our wide range
+            Start shopping now and explore our wide range
             of products. From essentials to luxuries, we have everything you
             need. Happy browsing!
           </p>
