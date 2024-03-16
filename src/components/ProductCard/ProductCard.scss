@@ -8,12 +8,33 @@
   border-radius: 20px;
   
 
-  img {
-    object-fit: cover;
-    height: 40%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
+    .product__image__container {
+        height: 40%;
+        position: relative;
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+      
+          }
+         .discount__tag {
+            position: absolute;
+            top: 0;
+            border-top-right-radius: 20px;
+            right: 0;
+            width: 30%;
+            height: 2rem;
+            display: grid;
+            place-items: center;
+            background-color: globals.$black;
+            color: globals.$white;
+            
+         } 
+    }
+  
+
 
   .product__info {
     padding: 1rem;
