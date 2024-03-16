@@ -4,7 +4,7 @@ import "./Button.scss";
 
 export const Button = ({ variant, onClick, children, className, to }) => {
   return (
-    <Link onClick={onClick} to={to} className={`${className} ${variant}`}>
+    <Link onClick={onClick} to={to} className={`button__styles ${className} ${variant}`}>
       {children}
     </Link>
   );
