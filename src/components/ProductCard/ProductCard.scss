@@ -7,6 +7,16 @@
   border-radius: 20px;
   max-height: 38rem;
 
+  /* Specify styles for the "Add to Cart" button */
+  .add__button {
+    display: none; /* Initially hidden */
+  }
+
+  /* Define hover effect for the product card */
+  &:hover .add__button {
+    display: block; /* Display when hovering over the product card */
+  }
+
   .product__image__container {
     height: 40%;
     position: relative;
@@ -48,10 +58,27 @@
       //   overflow: hidden;
       text-wrap: balance;
     }
-  }
 
-  .stars {
-    margin-top: auto;
+    .add__container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+
+      .add__button {
+        border: none;
+        background-color: globals.$black;
+        color: globals.$white;
+        padding: 0.3rem 0.4rem 0.2rem;
+        font-size: 14px;
+        cursor: pointer;
+        opacity: 0.9;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: rgb(49, 49, 49);
+        }
+      }
+    }
   }
 
   .product__cta {
