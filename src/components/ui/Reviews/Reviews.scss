@@ -1,8 +1,14 @@
+@use "../../../scss/base/mixins" as mixins;
+
 .reviews__container {
     display: flex;
     flex-direction: column;
     width: 50%;
     border-bottom: 1px solid black;
+
+    @include mixins.tabletLarge {
+        width: 100%;
+    }
     
 
     .review__flex {
