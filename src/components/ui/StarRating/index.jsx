@@ -4,7 +4,7 @@ import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import "./StarRating.scss";
 
-export const StarRating = ({ rating }) => {
+export const StarRating = ({ rating, className }) => {
   const stars = [];
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
@@ -22,7 +22,7 @@ export const StarRating = ({ rating }) => {
     stars.push(<FontAwesomeIcon icon={farStar} key={stars.length} />);
   }
 
-  return <div className="stars">{stars}</div>;
+  return <div className={className}>{stars}</div>;
 };
 
 

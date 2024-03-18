@@ -1,6 +1,6 @@
 import "./Home.scss";
 import { Hero, ProductCard } from "../../components";
-import { useApi } from "../../hooks/useFecth";
+import { useApi } from "../../hooks/useApi";
 import { useState } from "react";
 
 export const Home = () => {

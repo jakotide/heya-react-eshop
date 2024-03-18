@@ -1,0 +1,26 @@
+.reviews__container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-bottom: 1px solid black;
+    
+
+    .review__flex {
+        display: flex;
+        gap: 1rem;
+        font-size: 14px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .review__username {
+        padding: 0.1rem 0.2rem 0;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+    }
+
+    .review__description {
+        padding: 1rem 0;
+    }
+}
