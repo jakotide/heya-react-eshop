@@ -5,8 +5,15 @@ import { DiscountTag } from "../ui/DiscountTag";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { useCartStore } from "../../store/useCartStore";
 
 export const ProductCard = ({ data }) => {
+
+  const addToCart = useCartStore((state) => state.addToCart);
+
+  const handleAddToCart = () => {
+    addToCart(data);
+  } 
 
   const [isHover, setIsHover] = useState(false);
   return (
@@ -31,6 +38,7 @@ export const ProductCard = ({ data }) => {
           <AnimatePresence>
             {isHover && (
                             <motion.button 
+                            onClick={handleAddToCart}
                             className="add__button display-block"
                             initial={{opacity: 0, y: 10}}
                             animate={{opacity: 1, y: 0}}

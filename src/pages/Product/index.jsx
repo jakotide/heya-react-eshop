@@ -2,12 +2,19 @@ import "./Product.scss";
 import { useParams } from "react-router-dom";
 import { useApi } from "../../hooks/useApi";
 import { Button, StarRating, Reviews, DiscountTag } from "../../components";
+import { useCartStore } from "../../store/useCartStore";
 
 export const Product = () => {
   let params = useParams();
   const { data, isLoading, isError } = useApi(
     `https://api.noroff.dev/api/v1/online-shop/${params.id}`
   );
+
+  const addToCart = useCartStore((state) => state.addToCart);
+
+  const handleAddToCart = () => {
+    addToCart(data);
+  }
 
   return (
     <div className="container-flex">
@@ -37,7 +44,7 @@ export const Product = () => {
             </div>
             {data.discountedPrice ? <div className="product__current__price">Now {data.discountedPrice}£</div> : <div className="product__current__price">Only {data.price}£</div>}            
             <div className="product__cta">
-              <Button variant="green">Add To Cart</Button>
+              <Button variant="green" onClick={handleAddToCart}>Add To Cart</Button>
               <Button variant="black">Checkout</Button>
             </div>
           </div>
