@@ -1,0 +1,30 @@
+.cart__page__container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 80rem;
+    width: 100%;
+    margin: 8rem 0 8rem;
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .cart__item__titles {
+        display: grid;
+        grid-template-columns: 10% 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2rem;
+        gap: 1rem;
+        height: 100%;
+        max-height: 100px;
+        border-bottom: 1px solid #DBDBDB;
+        margin-bottom: 2rem;
+        color: rgb(83, 83, 83);
+        font-size: 14px;
+
+        :first-child {
+            opacity: 0;
+        }
+    }
+}
