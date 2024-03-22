@@ -3,8 +3,17 @@ import { useParams } from "react-router-dom";
 import { useApi } from "../../hooks/useApi";
 import { Button, StarRating, Reviews, DiscountTag } from "../../components";
 import { useCartStore } from "../../store/useCartStore";
+import React, { useEffect, useRef } from "react";
+
+
 
 export const Product = () => {
+  const topContainer = useRef();
+
+useEffect(() => {
+  // To make sure page starts from the top
+  topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+  }, []);
   let params = useParams();
   const { data, isLoading, isError } = useApi(
     `https://api.noroff.dev/api/v1/online-shop/${params.id}`
@@ -17,6 +26,8 @@ export const Product = () => {
   }
 
   return (
+    <>
+    <div ref={topContainer} />
     <div className="container-flex">
       <div className="product__page__container">
         <div className="product__page__top">
@@ -60,5 +71,7 @@ export const Product = () => {
         </div>
       </div>
     </div>
+    </>
+    
   );
 };

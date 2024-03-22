@@ -74,7 +74,7 @@ export const Cart = () => {
             <h3>Total</h3>
             <div>£{totalSum.toFixed(1)}</div>
           </div>
-          <Button variant="black" className="cart__checkout__btn">
+          <Button variant="black" className="cart__checkout__btn" to="/success">
             Checkout
           </Button>
         </div>
