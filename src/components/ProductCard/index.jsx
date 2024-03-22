@@ -8,16 +8,19 @@ import { useState } from "react";
 import { useCartStore } from "../../store/useCartStore";
 
 export const ProductCard = ({ data }) => {
-
   const addToCart = useCartStore((state) => state.addToCart);
 
   const handleAddToCart = () => {
     addToCart(data);
-  } 
+  };
 
   const [isHover, setIsHover] = useState(false);
   return (
-    <div className="product__card" onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+    <div
+      className="product__card"
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+    >
       <div className="product__image__container">
         <Link to={`/product/${data.id}`}>
           <img src={data.imageUrl} alt={data.title} />
@@ -37,18 +40,17 @@ export const ProductCard = ({ data }) => {
           <StarRating className="stars" rating={data.rating}></StarRating>
           <AnimatePresence>
             {isHover && (
-                            <motion.button 
-                            onClick={handleAddToCart}
-                            className="add__button display-block"
-                            initial={{opacity: 0, y: 10}}
-                            animate={{opacity: 1, y: 0}}
-                            transition={{duration: 0.2, ease: "easeIn"}}
-                            exit={{opacity: 0, y: 10}}
-                            >
-                              Add to cart
-                            </motion.button>
+              <motion.button
+                onClick={handleAddToCart}
+                className="add__button display-block"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, ease: "easeIn" }}
+                exit={{ opacity: 0, y: 10 }}
+              >
+                Add to cart
+              </motion.button>
             )}
-
           </AnimatePresence>
         </div>
       </div>
