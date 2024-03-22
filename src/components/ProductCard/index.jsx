@@ -9,9 +9,11 @@ import { useCartStore } from "../../store/useCartStore";
 
 export const ProductCard = ({ data }) => {
   const addToCart = useCartStore((state) => state.addToCart);
+  const [added, setAdded] = useState(false);
 
   const handleAddToCart = () => {
     addToCart(data);
+    setAdded(true);
   };
 
   const [isHover, setIsHover] = useState(false);
@@ -39,7 +41,7 @@ export const ProductCard = ({ data }) => {
         <div className="add__container">
           <StarRating className="stars" rating={data.rating}></StarRating>
           <AnimatePresence>
-            {isHover && (
+            {isHover && !added && (
               <motion.button
                 onClick={handleAddToCart}
                 className="add__button display-block"
@@ -50,6 +52,18 @@ export const ProductCard = ({ data }) => {
               >
                 Add to cart
               </motion.button>
+            )}
+            {isHover && added && (
+                  <motion.button
+                  onClick={handleAddToCart}
+                  className="add__button display-block"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2, ease: "easeIn" }}
+                  exit={{ opacity: 0, y: 10 }}
+                >
+                  Added
+                </motion.button>
             )}
           </AnimatePresence>
         </div>

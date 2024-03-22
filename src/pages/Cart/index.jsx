@@ -4,6 +4,7 @@ import { useCartStore } from "../../store/useCartStore";
 import { Button } from "../../components/ui/Button";
 import { Link } from "react-router-dom";
 
+
 export const Cart = () => {
   const { cart, clearCart, getTotalSum } = useCartStore();
 
@@ -22,7 +23,7 @@ export const Cart = () => {
             <div></div>
             <div>Product</div>
             <div>Price</div>
-            <div>Qty</div>
+            <div className="qty">Qty</div>
             <div></div>
           </div>
           <div>
