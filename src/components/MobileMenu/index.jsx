@@ -106,6 +106,7 @@ export const MobileMenu = () => {
               <li>
                 <Link to="/contact">Contact</Link>
               </li>
+              <div className="mobile__menu__logo">H2024</div>
             </menu>
           </motion.nav>
         )}

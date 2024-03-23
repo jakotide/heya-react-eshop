@@ -1,13 +1,14 @@
 import "./Home.scss";
-import { Hero, ProductCard } from "../../components";
+import { Hero, ProductCard, Loader } from "../../components";
 import { useApi } from "../../hooks/useApi";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export const Home = () => {
   const { data, isLoading, isError } = useApi(
     "https://api.noroff.dev/api/v1/online-shop"
   );
   const [searchQuery, setSearchQuery] = useState("");
+  const h2Ref = useRef(null);
 
   const handleSearchQuery = (e) => {
     setSearchQuery(e.target.value);
@@ -21,9 +22,9 @@ export const Home = () => {
 
   let content;
   if (isError) {
-    content = <div className="error">There was an error loading the data.</div>;
+    content = <div className="error">There was an error loading the products.</div>;
   } else if (isLoading) {
-    console.log(isLoading);
+    content = <Loader />;
   } else {
     const filteredData = search(data, searchQuery);
     content = filteredData.map((item) => (
@@ -32,11 +33,11 @@ export const Home = () => {
   }
   return (
     <>
-      <Hero />
+      <Hero scrollToAction={() => h2Ref.current.scrollIntoView({behavior: "smooth"})}/>
       <div className="container-flex">
         <section className="product__section">
           <div className="input__container">
-            <h2>Discover</h2>
+            <h2 ref={h2Ref}>Discover</h2>
             <input
               type="text"
               name=""

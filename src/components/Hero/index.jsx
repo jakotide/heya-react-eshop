@@ -3,7 +3,7 @@ import HeroImage from "../../assets/images/heya-hero-image.webp";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/Button";
 
-export const Hero = () => {
+export const Hero = ({scrollToAction}) => {
   return (
     <div className="container">
       <section className="hero__container">
@@ -15,10 +15,10 @@ export const Hero = () => {
             need. Happy browsing!
           </p>
           <div className="hero__button__container">
-            <Button variant="green">
+            <Button variant="green" onClick={scrollToAction}>
                 Products
             </Button>
-            <Button variant="black">
+            <Button variant="black" to="/contact">
                 Contact
             </Button>
           </div>

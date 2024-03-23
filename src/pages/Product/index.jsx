@@ -56,7 +56,7 @@ useEffect(() => {
             {data.discountedPrice ? <div className="product__current__price">Now {data.discountedPrice}£</div> : <div className="product__current__price">Only {data.price}£</div>}            
             <div className="product__cta">
               <Button variant="green" onClick={handleAddToCart}>Add To Cart</Button>
-              <Button variant="black">Checkout</Button>
+              <Button variant="black" to="/cart">Checkout</Button>
             </div>
           </div>
         </div>

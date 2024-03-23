@@ -6,7 +6,7 @@
     position: relative;
     nav {
         position: absolute;
-        top: 28.07rem;
+        top: 27.8rem;
         right: -5rem;
         z-index: 3;
 
@@ -24,6 +24,11 @@
                 justify-content: center;
                 align-items: center;
                 height: 3rem;
+            }
+
+            .mobile__menu__logo {
+                padding-top: 30rem;
+                font-size: 1rem;
             }
         }
     

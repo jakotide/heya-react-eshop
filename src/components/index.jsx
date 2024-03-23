@@ -9,5 +9,6 @@ export { StarRating } from "./ui/StarRating";
 export { DiscountTag } from "./ui/DiscountTag";
 export { Reviews } from "./ui/Reviews";
 export { ContactForm } from "./ContactForm";
+export { Loader } from "./Loader";
 
  
