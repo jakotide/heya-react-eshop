@@ -22,7 +22,7 @@
   background-color: globals.$primary;
   color: globals.$black;
 
-  :hover {
+  &:hover {
     background-color: globals.$p-hover;
   }
 }
@@ -30,7 +30,7 @@
 .black {
   background-color: globals.$black;
   color: globals.$white;
-  :hover {
+  &:hover {
     background-color: globals.$b-hover;
   }
 }
