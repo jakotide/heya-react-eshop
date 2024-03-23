@@ -1,4 +1,5 @@
 @use "../../scss/base/globals" as globals;
+@use "../../scss/base/mixins" as mixins;
 
 .cart__page__container {
   display: flex;
@@ -7,6 +8,14 @@
   max-width: 80rem;
   width: 100%;
   margin: 8rem 0 8rem;
+
+  @include mixins.tablet {
+    margin-top: 9rem;
+  }
+
+  @include mixins.mobile {
+    margin-top: 6.5rem;
+  }
 
   h1 {
     font-size: 4rem;
@@ -25,8 +34,23 @@
     margin: 0 4rem;
     border-bottom: 1px solid #dbdbdb;
 
+    @include mixins.tabletMax {
+      margin: 0 3rem;
+      gap: 1rem;
+      flex-direction: column;
+    }
+
+    @include mixins.mobile {
+      margin: 0 1.5rem;
+    }
+
     .left__container {
       width: 70%;
+
+      
+      @include mixins.tabletMax {
+       width: 100%;
+      }
       .cart__item__titles {
         display: grid;
         grid-template-columns: 10% 40% 1fr 1fr;
@@ -39,8 +63,15 @@
         color: rgb(83, 83, 83);
         font-size: 14px;
 
+        @include mixins.mobileSmall {
+            grid-template-columns:0% 30% 1fr 1fr;
+        }
+
         .qty {
-            margin-left: 1.7rem;
+          margin-left: 1.7rem;
+          @include mixins.mobile {
+            margin-left: 1.2rem; ;
+        }
         }
       }
     }
@@ -56,6 +87,11 @@
       flex-direction: column;
       gap: 1rem;
       padding: 3rem 2rem;
+
+      @include mixins.tabletMax {
+        width: 100%;
+        margin-top: 2rem;
+       }
 
       h2 {
         margin-bottom: 2rem;
@@ -108,13 +144,18 @@
     width: 50%;
     margin: 2rem 4rem;
 
+    @include mixins.tabletMax {
+        width: 70%;
+        margin: 2rem 1.5rem;
+    }
+
     a {
-        text-decoration: none;
+      text-decoration: none;
     }
 
     .clear__btn {
-        border: none;
-        cursor: pointer;
+      border: none;
+      cursor: pointer;
     }
   }
 }

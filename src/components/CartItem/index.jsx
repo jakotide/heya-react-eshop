@@ -1,4 +1,5 @@
 import "./CartItem.scss";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 import React from "react";
 import { useCartStore } from "../../store/useCartStore";
@@ -27,9 +28,12 @@ export const CartItem = ({ name, price, img, id }) => {
     removeFromCart(id);
   };
 
+  const isMobile = useMediaQuery("max-width: 420px");
+
   return (
     <div className="cart__item">
-      <img src={img} alt={name} />
+      {!isMobile && <img src={img} alt={name} />}
+      
       <div className="cart__product__details">
         <div>{name}</div>
         <button onClick={handleRemove}>Remove</button>
