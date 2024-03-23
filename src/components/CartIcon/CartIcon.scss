@@ -1,23 +1,23 @@
 .cart__container {
-    position: relative;
+  position: relative;
 
-    img {
-        width: 24px;
-        margin-bottom: 7px;
-    }
+  img {
+    width: 24px;
+    margin-bottom: 7px;
+  }
 
-    div {
-        position: absolute;
-        font-size: 9px;
-        color: #000;
-        background-color: #FFF;
-        height: 16px;
-        width: 16px;
-        padding-top: 3px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        top: -5px;
-        left: 17px;
-    }
+  div {
+    position: absolute;
+    font-size: 9px;
+    color: #000;
+    background-color: #fff;
+    height: 16px;
+    width: 16px;
+    padding-top: 3px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    top: -5px;
+    left: 17px;
+  }
 }

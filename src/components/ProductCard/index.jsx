@@ -54,16 +54,16 @@ export const ProductCard = ({ data }) => {
               </motion.button>
             )}
             {isHover && added && (
-                  <motion.button
-                  onClick={handleAddToCart}
-                  className="add__button display-block"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2, ease: "easeIn" }}
-                  exit={{ opacity: 0, y: 10 }}
-                >
-                  Added
-                </motion.button>
+              <motion.button
+                onClick={handleAddToCart}
+                className="add__button display-block"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, ease: "easeIn" }}
+                exit={{ opacity: 0, y: 10 }}
+              >
+                Added
+              </motion.button>
             )}
           </AnimatePresence>
         </div>

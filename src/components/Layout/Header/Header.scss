@@ -2,40 +2,39 @@
 @use "../../../scss/base/" as mixins;
 
 .header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: globals.$primary;
-    height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: globals.$primary;
+  height: 4.5rem;
+  color: globals.$black;
+  padding: 0 5rem;
+  position: fixed;
+  z-index: 100;
+
+  @include mixins.tablet {
+    padding: 0 3rem;
+  }
+
+  @include mixins.mobile {
+    padding: 1.5rem;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
     color: globals.$black;
-    padding: 0 5rem;
-    position: fixed;
-    z-index: 100;
+  }
 
-    @include mixins.tablet {
-        padding: 0 3rem;
-    }
-
-    @include mixins.mobile {
-        padding: 1.5rem;
-    }
-
-    .link {
-        text-decoration: none;
-        
-    }
-
-     .logo {
-        font-size: 2rem;
-        font-weight: bold;
-        cursor: pointer;
-        color: globals.$black;
-    }
-
-    .nav__container {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-    }
+  .nav__container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
 }

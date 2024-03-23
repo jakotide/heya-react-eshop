@@ -1,36 +1,36 @@
 @use "../../scss/base/globals" as globals;
 
 .contact__form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
+  input,
+  textarea {
+    border: 1px solid globals.$secondary;
+    margin-bottom: 1rem;
+    padding: 0.1rem 0 0 0.3rem;
+  }
 
-    input, textarea {
-        border: 1px solid globals.$secondary;
-        margin-bottom: 1rem;
-        padding: 0.1rem 0 0 0.3rem;
-    }
+  input {
+    height: 2rem;
+  }
 
-    input {
-        height: 2rem;
-    }
+  textarea {
+    height: 5rem;
+    resize: none;
+  }
 
-    textarea {
-        height: 5rem;
-        resize: none;
-    }
+  label {
+    margin-bottom: 0.1rem;
+  }
 
-    label {
-        margin-bottom: 0.1rem;
-    }
-
-    button {
-        height: 3rem;
-        padding-top: 0.2rem;
-        background-color: globals.$primary;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-    }
+  button {
+    height: 3rem;
+    padding-top: 0.2rem;
+    background-color: globals.$primary;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
 }

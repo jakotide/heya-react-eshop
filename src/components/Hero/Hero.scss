@@ -8,11 +8,11 @@
 
   @include mixins.tablet {
     margin: 9rem 3rem 5rem;
-}
+  }
 
-@include mixins.mobile {
+  @include mixins.mobile {
     margin: 6.5rem 1.5rem 5rem;
-}
+  }
 
   .hero__container {
     background-color: globals.$secondary;
@@ -42,7 +42,7 @@
       @include mixins.mobileSmall {
         padding: 0rem 1.5rem;
         align-items: center;
-    }
+      }
 
       h1 {
         font-size: 7rem;
@@ -52,11 +52,11 @@
         }
 
         @include mixins.tabletLarge {
-            font-size: 4rem;
+          font-size: 4rem;
         }
 
         @include mixins.mobileSmall {
-            font-size: 3rem;
+          font-size: 3rem;
         }
       }
 
@@ -66,13 +66,13 @@
         opacity: 0.8;
 
         @include mixins.tabletLarge {
-            max-width: 100%;
-          }
+          max-width: 100%;
+        }
 
-          @include mixins.mobileSmall {
-            font-size: 15px;
-            text-align: center;
-            text-wrap: none;
+        @include mixins.mobileSmall {
+          font-size: 15px;
+          text-align: center;
+          text-wrap: none;
         }
       }
 
@@ -82,7 +82,7 @@
         padding-top: 2rem;
 
         @include mixins.mobileSmall {
-            justify-content: center;
+          justify-content: center;
         }
       }
     }

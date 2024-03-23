@@ -24,6 +24,3 @@ export const StarRating = ({ rating, className }) => {
 
   return <div className={className}>{stars}</div>;
 };
-
-
-

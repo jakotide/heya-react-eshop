@@ -1,32 +1,31 @@
 @use "../../../scss/base/mixins" as mixins;
 
 .reviews__container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border-bottom: 1px solid black;
+
+  @include mixins.tabletLarge {
+    width: 100%;
+  }
+
+  .review__flex {
     display: flex;
-    flex-direction: column;
-    width: 50%;
-    border-bottom: 1px solid black;
+    gap: 1rem;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    @include mixins.tabletLarge {
-        width: 100%;
-    }
-    
+  .review__username {
+    padding: 0.1rem 0.2rem 0;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+  }
 
-    .review__flex {
-        display: flex;
-        gap: 1rem;
-        font-size: 14px;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .review__username {
-        padding: 0.1rem 0.2rem 0;
-        background-color: black;
-        color: white;
-        border-radius: 4px;
-    }
-
-    .review__description {
-        padding: 1rem 0;
-    }
+  .review__description {
+    padding: 1rem 0;
+  }
 }

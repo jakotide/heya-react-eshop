@@ -22,7 +22,9 @@ export const Home = () => {
 
   let content;
   if (isError) {
-    content = <div className="error">There was an error loading the products.</div>;
+    content = (
+      <div className="error">There was an error loading the products.</div>
+    );
   } else if (isLoading) {
     content = <Loader />;
   } else {
@@ -33,7 +35,11 @@ export const Home = () => {
   }
   return (
     <>
-      <Hero scrollToAction={() => h2Ref.current.scrollIntoView({behavior: "smooth"})}/>
+      <Hero
+        scrollToAction={() =>
+          h2Ref.current.scrollIntoView({ behavior: "smooth" })
+        }
+      />
       <div className="container-flex">
         <section className="product__section">
           <div className="input__container">

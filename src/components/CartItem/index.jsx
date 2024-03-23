@@ -36,7 +36,7 @@ export const CartItem = ({ name, price, img, id }) => {
       
       <div className="cart__product__details">
         <div>{name}</div>
-        <button onClick={handleRemove}>Remove</button>
+        <button onClick={handleRemove} className="remove__btn">Remove</button>
       </div>
 
       <div>£{(price * quantity).toFixed(2)}</div>

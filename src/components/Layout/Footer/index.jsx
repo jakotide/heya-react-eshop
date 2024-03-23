@@ -6,16 +6,16 @@ export const Footer = () => {
     <footer>
       <div className="footer__content__container">
         <div className="footer__top__container">
-          <Link to="/" className="footer__logo">HEYA</Link>
+          <Link to="/" className="footer__logo">
+            HEYA
+          </Link>
           <div className="socials">
             <div>F</div>
             <div>T</div>
             <div>Y</div>
           </div>
         </div>
-     
-          <div className="dev">Jakob Tidemand 2024</div>
-
+        <div className="dev">Jakob Tidemand 2024</div>
       </div>
     </footer>
   );

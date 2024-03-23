@@ -1,52 +1,51 @@
 @use "../../scss/base/globals" as globals;
 
 .menu__container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  nav {
+    position: absolute;
+    top: 27.8rem;
+    right: -5rem;
+    z-index: 3;
+
+    menu {
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 210px;
+      background-color: globals.$secondary;
+
+      li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+      }
+
+      .mobile__menu__logo {
+        padding-top: 30rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .hamburger__button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: globals.$primary;
     position: relative;
-    nav {
-        position: absolute;
-        top: 27.8rem;
-        right: -5rem;
-        z-index: 3;
 
-        menu {
-            padding-top: 1rem;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            width: 210px;
-            background-color: globals.$secondary;       
-
-            li {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 3rem;
-            }
-
-            .mobile__menu__logo {
-                padding-top: 30rem;
-                font-size: 1rem;
-            }
-        }
-    
+    .line {
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      color: black;
+      background-color: black;
     }
-
-    .hamburger__button {
-        width: 40px;
-        height: 40px;
-        border: none;
-        background-color: globals.$primary;
-        position: relative;
-
-        .line {
-            position: absolute;
-            width: 20px;
-            height: 2px;
-            color: black;
-            background-color: black;
-        }
-    }
+  }
 }
