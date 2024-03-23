@@ -3,10 +3,11 @@ import { useParams } from "react-router-dom";
 import { useApi } from "../../hooks/useApi";
 import { Button, StarRating, Reviews, DiscountTag } from "../../components";
 import { useCartStore } from "../../store/useCartStore";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export const Product = () => {
   const topContainer = useRef();
+  const [isAdded, setIsAdded] = useState(false);
 
   useEffect(() => {
     topContainer.current.scrollIntoView({ block: "end", behavior: "smooth" });
@@ -20,6 +21,7 @@ export const Product = () => {
 
   const handleAddToCart = () => {
     addToCart(data);
+    setIsAdded(true);
   };
 
   return (
@@ -60,9 +62,15 @@ export const Product = () => {
                 </div>
               )}
               <div className="product__cta">
-                <Button variant="green" onClick={handleAddToCart}>
-                  Add To Cart
-                </Button>
+                {!isAdded ? (
+                  <Button variant="green" onClick={handleAddToCart}>
+                    Add to Cart
+                  </Button>
+                ) : (
+                  <Button variant="green" onClick={handleAddToCart}>
+                    Added
+                  </Button>
+                )}
                 <Button variant="black" to="/cart">
                   Checkout
                 </Button>
